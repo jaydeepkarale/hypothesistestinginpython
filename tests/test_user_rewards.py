@@ -11,6 +11,7 @@ def test_get_reward_points(initial_points):
     assert user_rewards.get_reward_points() == initial_points
 
 # Use Hypothesis to generate test cases for spending reward points
+# some change
 @given(initial_points=reward_points_strategy, spend_amount=st.integers(min_value=0, max_value=1000))
 def test_spend_reward_points(initial_points, spend_amount):
     user_rewards = UserRewards(initial_points)
