@@ -60,5 +60,7 @@ class CrossBrowserSetup(object):
                 web_driver.quit()
                 return True
             else:
+                web_driver.execute_script("lambda-status=failed")
+                web_driver.quit()
                 return False
 
